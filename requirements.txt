@@ -1,0 +1,44 @@
+# ─── Core LangGraph & LangChain ───────────────────────────────────────────────
+langgraph>=0.2.0
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-groq>=0.1.9          # Groq integration (replaces langchain-openai)
+
+# ─── Groq SDK ─────────────────────────────────────────────────────────────────
+groq>=0.9.0                    # Official Groq Python client
+
+# ─── Data validation & structured output ──────────────────────────────────────
+pydantic>=2.0.0
+
+# ─── Environment variables ────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ─── Optional: graph visualisation (used in notebooks, not required for .py) ──
+# Uncomment if you want to generate graph diagrams:
+# pygraphviz
+# matplotlib
+
+# ─── How to install ───────────────────────────────────────────────────────────
+# 1. Create a virtual environment:
+#       python -m venv venv
+#       source venv/bin/activate        (Mac / Linux)
+#       venv\Scripts\activate           (Windows)
+#
+# 2. Install all packages:
+#       pip install -r requirements.txt
+#
+# 3. Create a .env file in the same folder with:
+#       GROQ_API_KEY=your_groq_api_key_here
+#
+#    Get your FREE Groq API key at: https://console.groq.com
+#
+# 4. Run any script:
+#       python 1_bmi_workflow.py
+#       python 2_simple_llm_workflow.py
+#       ... etc.
+#
+# ─── Groq free models used across all scripts ─────────────────────────────────
+#   llama-3.3-70b-versatile   → general Q&A, blog writing, chatbot
+#   llama3-8b-8192            → faster/lighter tasks
+#   mixtral-8x7b-32768        → structured output, evaluation tasks
