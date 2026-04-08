@@ -1,0 +1,12 @@
+Meeting Notes Transcript — March 18 2024
+
+Attendees: Sarah Johnson (Project Manager), Amit Verma (Lead Developer), Neha Gupta (Designer), Tom Bradley (QA Engineer).
+
+Action Items discussed:
+1. Amit Verma to complete API integration by March 22. Priority: High.
+2. Neha Gupta to deliver revised mockups by March 20. Priority: Medium.
+3. Tom Bradley to set up automated test suite by March 25. Priority: High.
+4. Sarah Johnson to send client update email by March 19. Priority: Medium.
+
+Budget update: current spend is 68,500 USD against a 75,000 USD budget.
+Next meeting scheduled for March 25 2024 at 10:00 AM IST.
