@@ -1,22 +1,44 @@
-# ─────────────────────────────────────────────────────────────────────────────
-# requirements.txt
-# For: 3_prompt_chaining.py  &  5_UPSC_essay_workflow.py
+# -*- coding: utf-8 -*-
+# ══════════════════════════════════════════════════════════════════════════════
+#  RAG + SQL Agent Application — Requirements
+#  Stack: LangChain 0.3+ · Groq · ChromaDB · HuggingFace · SQLite · Streamlit
 #
-# Install: pip install -r requirements.txt
-# Get Groq API key free at: https://console.groq.com
-# ─────────────────────────────────────────────────────────────────────────────
+#  Install:   pip install -r requirements.txt
+#  Run:       python -m streamlit run rag_sql_app.py
+# ══════════════════════════════════════════════════════════════════════════════
 
-# LangGraph — graph-based agent/workflow orchestration
-langgraph>=0.2.0
+# ── LangChain core ────────────────────────────────────────────────────────────
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0    # RecursiveCharacterTextSplitter
 
-# LangChain Groq integration — ChatGroq class
-langchain-groq>=0.1.9
+# ── Groq LLM (open-source: LLaMA 3, Gemma 2) ─────────────────────────────────
+langchain-groq>=0.2.0
 
-# LangChain core — BaseModel, messages, etc.
-langchain-core>=0.2.0
+# ── Embeddings (free, runs locally — no API key needed) ──────────────────────
+langchain-huggingface>=0.1.0       # HuggingFaceEmbeddings
+sentence-transformers>=3.0.0       # all-MiniLM-L6-v2 model
+torch>=2.0.0                       # required by sentence-transformers (CPU)
 
-# Pydantic — EvaluationSchema structured output (used in 5_UPSC_essay_workflow.py)
-pydantic>=2.0.0
+# ── Vector Store ──────────────────────────────────────────────────────────────
+chromadb>=0.5.0                    # in-memory + persistent vector store
 
-# Environment variable loader — load_dotenv()
+# ── Document Loaders ──────────────────────────────────────────────────────────
+pypdf>=4.0.0                       # PDF loading (PyPDFLoader)
+unstructured>=0.15.0               # Markdown and other format loaders
+
+# ── SQL Agent ─────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0.0                  # SQLDatabase backend (SQLite built-in)
+
+# ── Streamlit UI ──────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── dotenv ────────────────────────────────────────────────────────────────────
 python-dotenv>=1.0.0
+
+# ── typing backport ───────────────────────────────────────────────────────────
+typing_extensions>=4.9.0
+
+# ── Standard library (no install needed) ─────────────────────────────────────
+# os, sqlite3, tempfile, pathlib
